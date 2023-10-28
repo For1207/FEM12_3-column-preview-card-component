@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  height: 100dvh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-light-gray);
+}
+
+img,
+svg {
+  display: block;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 40px;
+}
+
+.container,
+.attribution {
+  max-width: 1440px;
+  min-width: 375px;
+}
+
+
+/* Desktop styles */
+.container {
+  max-width: 920px;
+  min-width: 327px;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+img {
+  width: 64px;
+}
+
+.card {
+  padding: 48px;
+}
+
+.card:first-child {
+  background-color: var(--bright-orange);
+}
+
+.card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+}
+
+h2 {
+  margin-top: 35px;
+  color: var(--very-light-gray)
+}
+
+p {
+  margin-top: 25px;
+  line-height: 1.667;
+  color: var(--transparent-white);
+}
+
+.card a {
+  display: block;
+  width: 146px;
+  background-color: var(--very-light-gray);
+  margin-top: 83px;
+  padding: 14.5px 0;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid transparent;
+}
+
+.card:nth-child(1) {
+  color: var(--bright-orange);
+}
+
+.card:nth-child(2) {
+  color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+  color: var(--very-dark-cyan);
+}
+
+.card a:hover {
+  border: 2px solid var(--very-light-gray);
+  background-color: transparent;
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
+
+.attribution {
+  margin-top: 10px;
+  color: var(--very-dark-cyan);
+}
+
+.attribution a {
+  color: var(--very-dark-cyan)
+}
+
+/* Tablet styles */
+@media only screen and (max-width: 924px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 308.38px;
+  }
+
+  .card:nth-child(1) {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .card:nth-child(2) {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .card:nth-child(3) {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+@media only screen and (max-width: 624px) {
+
+  .card:nth-child(1) {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card:nth-child(2) {
+    border-radius: 0;
+  }
+
+  .attribution {
+    text-align: center;
+  }
+}
+
+
+
